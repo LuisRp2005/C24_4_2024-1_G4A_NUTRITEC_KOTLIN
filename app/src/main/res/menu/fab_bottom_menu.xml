@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bottom_Comida"
+        android:title="Comida"
+        android:icon="@drawable/ic_casa"/>
+
+    <item android:id="@+id/bottom_Ejercicio"
+        android:title="Ejercicio"
+        android:icon="@drawable/ic_casa"/>
+
+    <item android:id="@+id/fab"
+        android:title=""
+        android:enabled="false"/>
+
+    <item android:id="@+id/bottom_Ejecicio_Designado"
+        android:title="Ejercicio Designado"
+        android:icon="@drawable/ic_casa"/>
+
+    <item android:id="@+id/bottom_Comida_Designada"
+        android:title="Comida Designada"
+        android:icon="@drawable/ic_casa"/>
+
+
+</menu>

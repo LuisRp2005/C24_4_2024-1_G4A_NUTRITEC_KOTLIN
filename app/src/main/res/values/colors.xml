@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#95c99c</color>
+    <color name="blue">#111380</color>
+
+
+    <color name="rippleColor">#95c99c</color>
+    <color name="indicatorColor">#03FF72</color>
+    <color name="backgroundColor">#95c99c</color>
+    <color name="mainColor">#95c99c</color>
+    <color name="icon_color">#000000</color> <!-- Negro -->
+
+
+
+</resources>
