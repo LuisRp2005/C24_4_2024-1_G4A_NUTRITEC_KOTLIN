@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/bottom_Comida"
-        android:title="Comida"
-        android:icon="@drawable/ic_casa"/>
+        android:title="Comidas"
+        android:icon="@drawable/ic_plato"/>
 
     <item android:id="@+id/bottom_Ejercicio"
-        android:title="Ejercicio"
-        android:icon="@drawable/ic_casa"/>
+        android:title="Ejercicios"
+        android:icon="@drawable/ic_ejercicio"/>
 
     <item android:id="@+id/fab"
-        android:title=""
+        android:title=" "
         android:enabled="false"/>
 
     <item android:id="@+id/bottom_Ejecicio_Designado"
-        android:title="Ejercicio Designado"
-        android:icon="@drawable/ic_casa"/>
+        android:title="Ejercicio Des."
+        android:icon="@drawable/ic_ejercicio"/>
 
     <item android:id="@+id/bottom_Comida_Designada"
-        android:title="Comida Designada"
-        android:icon="@drawable/ic_casa"/>
+        android:title="Comida Des."
+        android:icon="@drawable/ic_plato"/>
 
 
 </menu>
