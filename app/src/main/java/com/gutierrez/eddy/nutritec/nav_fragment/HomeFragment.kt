@@ -31,11 +31,13 @@ class HomeFragment : Fragment() {
                     replaceFragment(EjercicioFragment())
                     requireActivity().title = "Ejercicio"
                 }
-                // Agrega los casos para los otros items del BottomNavigationView según sea necesario
-
-                else -> {
-                    replaceFragment(ComidaFragment()) // Fragmento por defecto
-                    requireActivity().title = "Comida"
+                R.id.bottom_Comida_Designada -> {
+                    replaceFragment(Comida_DesignadaFragment())
+                    requireActivity().title = "Comida Designada"
+                }
+                R.id.bottom_Ejecicio_Designado -> {
+                    replaceFragment(Ejercicio_DesignadoFragment())
+                    requireActivity().title = "Ejercicio Designado"
                 }
             }
             true
@@ -53,7 +55,7 @@ class HomeFragment : Fragment() {
 
     private fun replaceFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.navFragment, fragment)
+            .replace(R.id.bottomFragment, fragment)
             .commit()
     }
 }
