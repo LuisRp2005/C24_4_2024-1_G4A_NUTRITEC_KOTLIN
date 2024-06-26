@@ -5,14 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".bottom_fragment.EjercicioFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- RecyclerView para mostrar la lista de ejercicios -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerejercicio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Ejercicios"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/backgroundColor"/>
+        android:padding="8dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_ejercicio" />
 
 </FrameLayout>
