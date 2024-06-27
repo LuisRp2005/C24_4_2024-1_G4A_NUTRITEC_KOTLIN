@@ -1,61 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".bottom_fragment.ComidaFragment">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <!-- RecyclerView para mostrar la lista de comidas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewComidas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        tools:listitem="@layout/item_comida" />
 
-        <!-- Contenedor de fragmentos -->
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/bottomFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-        <!-- Barra de navegación inferior -->
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:backgroundTint="@color/backgroundColor"
-            app:contentInsetEnd="0dp"
-            app:contentInsetStart="0dp"
-            app:fabCradleMargin="10dp"
-            app:fabCradleRoundedCornerRadius="20dp"
-            app:fabAlignmentMode="center">
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:elevation="0dp"
-                app:itemIconTint="@color/black"
-                app:itemTextColor="@color/black"
-                app:itemRippleColor="@color/rippleColor"
-                app:labelVisibilityMode="labeled"
-                app:menu="@menu/fab_bottom_menu" />
-
-        </com.google.android.material.bottomappbar.BottomAppBar>
-
-        <!-- Botón de acción flotante -->
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/rippleColor"
-            android:src="@drawable/baseline_add_24"
-            android:tint="@color/black"
-            app:layout_anchor="@id/bottomAppBar" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</FrameLayout>

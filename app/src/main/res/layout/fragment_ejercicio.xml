@@ -9,9 +9,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerejercicio"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"
+        android:layout_height="763dp"
         android:clipToPadding="false"
+        android:padding="8dp"
         tools:listitem="@layout/item_ejercicio" />
 
 </FrameLayout>
