@@ -76,6 +76,7 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
+                    android:id="@+id/editTextFecha"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
@@ -84,9 +85,10 @@
                     android:drawablePadding="8dp"
                     android:hint="@string/edad"
                     android:ems="10"
-                    android:inputType="text"
+                    android:inputType="date"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background"/>
+
 
                 <EditText
                     android:layout_width="0dp"
