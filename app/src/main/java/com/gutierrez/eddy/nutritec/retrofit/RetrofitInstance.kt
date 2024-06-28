@@ -1,5 +1,6 @@
 package com.gutierrez.eddy.nutritec.retrofit
 
+import UsuariosApi
 import com.google.gson.GsonBuilder
 import com.gutierrez.eddy.nutritec.api.CategoriaComidaApi
 import com.gutierrez.eddy.nutritec.api.ComidasApi
@@ -46,5 +47,9 @@ object RetrofitInstance {
 
     val categoriaComidaApi: CategoriaComidaApi by lazy {
         retrofit.create(CategoriaComidaApi::class.java)
+    }
+
+    val usuariosApi: UsuariosApi by lazy {
+        retrofit.create(UsuariosApi::class.java)
     }
 }

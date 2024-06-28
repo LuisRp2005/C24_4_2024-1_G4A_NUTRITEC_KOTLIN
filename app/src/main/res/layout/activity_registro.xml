@@ -7,7 +7,7 @@
     android:background="@drawable/fondo_login"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Registro">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
-            <!-- Primer LinearLayout para Nombre y Apellidos -->
+            <!-- EditText para Nombre y Apellidos -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,6 +41,7 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
+                    android:id="@+id/edtNombre"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
@@ -54,6 +55,7 @@
                     android:textColorHint="@color/cardview_dark_background"/>
 
                 <EditText
+                    android:id="@+id/edtApellido"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
@@ -68,7 +70,7 @@
                     android:textColorHint="@color/cardview_dark_background"/>
             </LinearLayout>
 
-            <!-- Segundo LinearLayout para Edad y Género -->
+            <!-- EditText para Edad y Género -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,7 +78,7 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
-                    android:id="@+id/editTextFecha"
+                    android:id="@+id/edtEdad"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
@@ -89,8 +91,8 @@
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background"/>
 
-
                 <EditText
+                    android:id="@+id/edtGenero"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
@@ -107,20 +109,23 @@
 
             <!-- EditText para Correo -->
             <EditText
+                android:id="@+id/edtCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_chat_24"
                 android:drawablePadding="8dp"
-                android:hint="@string/correo"
-                android:ems="10"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black"
-                android:textColorHint="@color/cardview_dark_background"/>
+                android:textColorHint="@color/cardview_dark_background"
+                android:focusable="false"
+                android:enabled="false"/>
+
 
             <!-- EditText para Contraseña -->
             <EditText
+                android:id="@+id/edtContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
@@ -133,9 +138,37 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/cardview_dark_background"/>
 
+            <!-- EditText para Altura -->
+            <EditText
+                android:id="@+id/edtAltura"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="altura_cm"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"/>
+
+            <!-- EditText para Peso -->
+            <EditText
+                android:id="@+id/edtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="peso_kg"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"/>
+
             <!-- Botón de Registrar -->
             <Button
-                android:id="@+id/btnRegistrarUsuario"
+                android:id="@+id/btnGuardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
