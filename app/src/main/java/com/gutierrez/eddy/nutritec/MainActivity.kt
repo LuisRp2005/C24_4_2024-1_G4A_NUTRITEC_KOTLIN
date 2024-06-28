@@ -9,6 +9,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
+import com.gutierrez.eddy.nutritec.nav_fragment.ChatGPTFragment
 import com.gutierrez.eddy.nutritec.nav_fragment.HomeFragment
 import com.gutierrez.eddy.nutritec.nav_fragment.ProfileFragment
 
@@ -44,24 +45,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_home -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.navFragment, HomeFragment()) // Mostrar HomeFragment al seleccionar "Home"
-                    .commit()
-                title = "Home" // Establecer título de la actividad
-            }
-            R.id.nav_profile -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.navFragment, ProfileFragment()) // Mostrar ProfileFragment al seleccionar "Profile"
-                    .commit()
-                title = "Profile" // Establecer título de la actividad
-            }
+        val selectedFragment: Fragment = when (item.itemId) {
+            R.id.nav_home -> HomeFragment()
+            R.id.nav_profile -> ProfileFragment()
+            R.id.nav_chatgpt -> ChatGPTFragment() // Mostrar ChatGPTFragment al seleccionar "ChatGPT"
             R.id.nav_logout -> {
-                // Acción para logout
                 Toast.makeText(this, "Logout clicked", Toast.LENGTH_SHORT).show()
+                return true
             }
+            else -> return false
         }
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.navFragment, selectedFragment)
+            .commit()
+        title = item.title // Establecer título de la actividad
         drawerLayout.closeDrawer(GravityCompat.START) // Cerrar el drawer después de hacer clic en un ítem
         return true
     }

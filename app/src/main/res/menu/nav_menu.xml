@@ -11,10 +11,11 @@
         <item android:id="@+id/nav_profile"
             android:title="Usuario"
             android:icon="@drawable/ic_usuario"/>
+        <item android:id="@+id/nav_chatgpt"
+            android:title="ChatGPT"
+            android:icon="@drawable/ic_chatgpt"/> <!-- Agregado nuevo ítem -->
     </group>
     <item android:id="@+id/nav_logout"
         android:title="Cerrar Sesion"
-        android:icon="@drawable/ic_sal"
-        />
-
+        android:icon="@drawable/ic_sal"/>
 </menu>

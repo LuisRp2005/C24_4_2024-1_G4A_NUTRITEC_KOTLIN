@@ -12,6 +12,6 @@
     <color name="mainColor">#95c99c</color>
     <color name="icon_color">#000000</color> <!-- Negro -->
 
-
+    <color name="purple_500">#6200EE</color>
 
 </resources>
