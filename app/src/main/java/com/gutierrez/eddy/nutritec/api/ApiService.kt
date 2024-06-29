@@ -6,6 +6,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ApiService {
-    @POST("/api/chat/send")
+    @POST("/api/v1/chat/send")
     fun sendMessage(@Body requestBody: Map<String, String>): Call<ChatResponse>
 }

@@ -19,7 +19,7 @@ class Registro : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var edtNombre: EditText
     private lateinit var edtApellido: EditText
-    private lateinit var edtEdad: EditText
+    private lateinit var edtFechaNacimiento: EditText
     private lateinit var edtGenero: EditText
     private lateinit var edtCorreo: EditText
     private lateinit var edtContraseña: EditText
@@ -38,7 +38,7 @@ class Registro : AppCompatActivity() {
         edtApellido = findViewById(R.id.edtApellido)
         edtAltura = findViewById(R.id.edtAltura)
         edtPeso = findViewById(R.id.edtPeso)
-        edtEdad = findViewById(R.id.edtEdad)
+        edtFechaNacimiento = findViewById(R.id.edtFechaNacimiento)
         edtGenero = findViewById(R.id.edtGenero)
         edtCorreo = findViewById(R.id.edtCorreo)
         edtContraseña = findViewById(R.id.edtContraseña)
@@ -61,7 +61,7 @@ class Registro : AppCompatActivity() {
         val apellido = edtApellido.text.toString().trim()
         val altura = edtAltura.text.toString().toDoubleOrNull()
         val peso = edtPeso.text.toString().toDoubleOrNull()
-        val edad = edtEdad.text.toString().toIntOrNull()
+        val edad = edtFechaNacimiento.text.toString().toDoubleOrNull()
         val genero = edtGenero.text.toString().trim()
         val contraseña = edtContraseña.text.toString().trim()
 

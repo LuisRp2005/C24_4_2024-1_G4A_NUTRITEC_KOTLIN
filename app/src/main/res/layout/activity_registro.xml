@@ -78,14 +78,14 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
-                    android:id="@+id/edtEdad"
+                    android:id="@+id/edtFechaNacimiento"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_calendar_month_24"
                     android:drawablePadding="8dp"
-                    android:hint="@string/edad"
+                    android:hint="dd/MM/yyyy"
                     android:ems="10"
                     android:inputType="date"
                     android:textColor="@color/black"

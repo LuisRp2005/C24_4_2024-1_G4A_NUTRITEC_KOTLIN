@@ -3,6 +3,8 @@ package com.gutierrez.eddy.nutritec.retrofit
 import UsuariosApi
 import com.google.gson.GsonBuilder
 import com.gutierrez.eddy.nutritec.api.ApiService
+import com.gutierrez.eddy.nutritec.api.AsignacionComidaApi
+import com.gutierrez.eddy.nutritec.api.AsignacionEjercicioApi
 import com.gutierrez.eddy.nutritec.api.CategoriaComidaApi
 import com.gutierrez.eddy.nutritec.api.ComidasApi
 import com.gutierrez.eddy.nutritec.api.EjerciciosApi
@@ -53,6 +55,15 @@ object RetrofitInstance {
     val usuariosApi: UsuariosApi by lazy {
         retrofit.create(UsuariosApi::class.java)
     }
+
+    val asignacionComidaApi: AsignacionComidaApi by lazy {
+        retrofit.create(AsignacionComidaApi::class.java)
+    }
+
+    val asignacionEjercicioApi: AsignacionEjercicioApi by lazy {
+        retrofit.create(AsignacionEjercicioApi::class.java)
+    }
+
     fun createApiService(): ApiService {
         return retrofit.create(ApiService::class.java)
     }
