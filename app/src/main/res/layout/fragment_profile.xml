@@ -4,166 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_background"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/ivProfileImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="7dp"
-        android:background="@drawable/custom_edittext"
+        android:layout_marginTop="16dp"
         android:padding="4dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/profileInfoContainer"
-        android:layout_width="374dp"
-        android:layout_height="607dp"
-        android:background="@drawable/custom_edittext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_background"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProfileImage"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tvNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Nombre:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="Nombre:" />
 
         <TextView
             android:id="@+id/tvName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="Nombre" />
 
         <TextView
             android:id="@+id/tvLastNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Apellido:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="Apellido:" />
 
         <TextView
             android:id="@+id/tvLastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="Apellido" />
 
         <TextView
             android:id="@+id/tvEmailLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Correo:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="Correo:" />
 
         <TextView
             android:id="@+id/tvEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="correo@ejemplo.com" />
 
         <TextView
             android:id="@+id/tvAlturaLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Altura:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="Altura:" />
 
         <TextView
             android:id="@+id/tvAltura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="170 cm" />
 
         <TextView
             android:id="@+id/tvPesoLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Peso:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="Peso:" />
 
         <TextView
             android:id="@+id/tvPeso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="65 kg" />
 
         <TextView
             android:id="@+id/tvGeneroLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Género:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="Género:" />
 
         <TextView
             android:id="@+id/tvGenero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="Masculino" />
 
         <TextView
             android:id="@+id/tvImcLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="IMC:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            style="@style/ProfileLabel"
+            android:text="IMC:" />
 
         <TextView
             android:id="@+id/tvImc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            style="@style/ProfileValue"
             tools:text="22.5" />
 
     </LinearLayout>

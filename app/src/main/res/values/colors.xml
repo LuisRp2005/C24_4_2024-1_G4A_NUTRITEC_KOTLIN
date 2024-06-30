@@ -13,5 +13,5 @@
     <color name="icon_color">#000000</color> <!-- Negro -->
 
     <color name="purple_500">#6200EE</color>
-
+    <color name="light_background">#f0f0f0</color>
 </resources>
