@@ -1,5 +1,7 @@
 package com.gutierrez.eddy.nutritec
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -8,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.navigation.NavigationView
 import com.gutierrez.eddy.nutritec.nav_fragment.ChatGPTFragment
 import com.gutierrez.eddy.nutritec.nav_fragment.HomeFragment
@@ -16,6 +21,7 @@ import com.gutierrez.eddy.nutritec.nav_fragment.ProfileFragment
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +56,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_profile -> ProfileFragment()
             R.id.nav_chatgpt -> ChatGPTFragment() // Mostrar ChatGPTFragment al seleccionar "ChatGPT"
             R.id.nav_logout -> {
-                Toast.makeText(this, "Logout clicked", Toast.LENGTH_SHORT).show()
+                signOut()
                 return true
             }
             else -> return false
@@ -62,6 +68,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         title = item.title // Establecer título de la actividad
         drawerLayout.closeDrawer(GravityCompat.START) // Cerrar el drawer después de hacer clic en un ítem
         return true
+    }
+
+    private fun signOut() {
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+        googleSignInClient.signOut()
+            .addOnCompleteListener(this) {
+                Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
+                navigateToLogin()
+            }
+    }
+
+    private fun navigateToLogin() {
+        val intent = Intent(this, Login::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 
     override fun onBackPressed() {

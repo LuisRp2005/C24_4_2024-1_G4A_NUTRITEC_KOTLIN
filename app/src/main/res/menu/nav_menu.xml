@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- nav_menu.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_usuario"/>
         <item android:id="@+id/nav_chatgpt"
             android:title="ChatGPT"
-            android:icon="@drawable/ic_chatgpt"/> <!-- Agregado nuevo ítem -->
+            android:icon="@drawable/ic_chatgpt"/>
     </group>
     <item android:id="@+id/nav_logout"
-        android:title="Cerrar Sesion"
+        android:title="Cerrar Sesión"
         android:icon="@drawable/ic_sal"/>
 </menu>

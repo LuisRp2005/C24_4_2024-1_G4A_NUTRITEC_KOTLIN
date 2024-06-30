@@ -12,10 +12,7 @@ import com.gutierrez.eddy.nutritec.databinding.FragmentProfileBinding
 import com.gutierrez.eddy.nutritec.models.Usuarios
 import com.gutierrez.eddy.nutritec.retrofit.RetrofitInstance
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.snackbar.Snackbar
-import com.gutierrez.eddy.nutritec.Login
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,7 +21,6 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var usuario: Usuarios
 
     override fun onCreateView(
@@ -53,30 +49,6 @@ class ProfileFragment : Fragment() {
             // Llamar a la API para obtener los datos del usuario registrado
             buscarUsuarioPorCorreo(googleAccount.email)
         }
-
-        binding.btnSignOut.setOnClickListener {
-            signOut()
-        }
-    }
-
-    private fun signOut() {
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestEmail()
-            .build()
-
-        googleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
-        googleSignInClient.signOut()
-            .addOnCompleteListener(requireActivity()) {
-                Snackbar.make(requireView(), "Sesión cerrada", Snackbar.LENGTH_SHORT).show()
-                navigateToLogin()
-            }
-    }
-
-    private fun navigateToLogin() {
-        val intent = Intent(requireContext(), Login::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
-        requireActivity().finish()
     }
 
     private fun buscarUsuarioPorCorreo(email: String?) {
